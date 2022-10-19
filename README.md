@@ -22,7 +22,7 @@
     - 끝까지 성공하는 경우
     - 중간에 멈춘 경우
     - 도착하지만 떨어뜨린 경우 등등 성공 실패 케이스로 나누어서 classification 
-### 2. Visuotactile-RL: Learning Multimodal Manipulation Policies with Deep Reinforcement Learning
+### 2. Visuotactile-RL: Learning Multimodal Manipulation Policies with Deep Reinforcement Learning([paper](https://ieeexplore.ieee.org/document/9812019))
 - Manipulation task : 1. make contact with an object(square, trianble, sphere) 2. open a hinged door 3. grasp and raise an object
 - reference :
   - [2] Reinforcement learning approaches have shown an impressive ability to learn expressible controllers for robotic manipulation  
@@ -47,7 +47,7 @@
   
     H. van Hoof, N. Chen, M. Karl, P. van der Smagt, and J. Peters, “Stable reinforcement learning with autoencoders for tactile and visual data,” in 2016 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Daejon, Korea, 2016, pp. 3928–3934.
   - [22] use PPO with pixel-level visuotactile inputs to teach a simulated robot arm to perform several tactile-rich tasks in a simulation environment.
-  
+    combines RGB and tactile into RGBT 4ch image  
     A. Church, J. Lloyd, R. Hadsell, and N. F. Lepora, “Optical tactile sim-to-real policy transfer via real-to-sim tactile image translation,” 2021. 
 - words 
   - intermittent : 간헐적인
@@ -61,3 +61,7 @@
   - perception architecture (MP & SP)
   - visual degradation
   - tactile augmenting
+
+### 3. Sim-to-Real Reinforcement Learning for Deformable Object Manipulation  
+J. Matas, S. James, and A. J. Davison, “Sim-to-Real Reinforcement Learning for Deformable Object Manipulation,” in Proceedings of The 2nd Conference on Robot Learning, Oct. 2018, pp. 734–743. Accessed: Oct. 19, 2022. [Online]. Available: https://proceedings.mlr.press/v87/matas18a.html
+
