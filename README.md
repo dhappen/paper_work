@@ -64,4 +64,13 @@
 
 ### 3. Sim-to-Real Reinforcement Learning for Deformable Object Manipulation  
 J. Matas, S. James, and A. J. Davison, “Sim-to-Real Reinforcement Learning for Deformable Object Manipulation,” in Proceedings of The 2nd Conference on Robot Learning, Oct. 2018, pp. 734–743. Accessed: Oct. 19, 2022. [Online]. Available: https://proceedings.mlr.press/v87/matas18a.html
-
+- manipulation goal : to learn deformable object manipulation in an end-to-end manner,
+- Reference
+  - [14] we employ Reinforcement Learning (RL) to create an algorithm that is task agnostic and can learn many different behaviours based on the definition of a reward and a couple of provided demonstrations. This has been extensively studied in the context of rigid object manipulation  
+    D. Quillen, E. Jang, O. Nachum, C. Finn, J. Ibarz, and S. Levine. Deep Reinforcement Learning for Vision-Based Robotic Grasping: A Simulated Comparative Evaluation of Off-Policy Methods. CoRR, 2018.
+  - Cloth manipulation에 관련한 paper들
+  - rigid object manipulation [21, 22]  
+    [21] S. Gu, E. Holly, T. Lillicrap, and S. Levine. Deep Reinforcement Learning for Robotic Manipulation with Asynchronous Off-Policy Updates. International Conference on Robotics and Automation, 2016.  
+    [22] J. Peters and S. Schaal. Reinforcement learning of motor skills with policy gradients. Neural Networks.
+  - DDPG 관련 논문들
+  - sim2real을 위한 관련 논문(domain randomization, additional training in real world)
