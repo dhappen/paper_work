@@ -1,11 +1,3 @@
-# paper_work
-## 2022 ICRA(The International Conference on Robotics and Automation) paper review
-### 1. IPC-GraspSim: Reducing the Sim2Real Gap for Parallel-Jaw Grasping with the Incremental Potential Contact Model([paper](https://arxiv.org/abs/2111.01391))
-- IPC(incremental potential contact)라고 하는 computer graphics physics engien 기반으로 만든 grasp simulator
-- 현실과 가까운 simulator 상의 soft compliant jaw tips 구현이 가장 큰 contribution
-- 4-A Grasp simulation procedure에 대한 설명 참고할 만함
-  - Environment의 scenario 순차적으로 설명
-  
 인간의 촉각, 시각 feedback의 중요성에 대한 paper도 relation 하는 편
 ## Related paper
 ### 1. Visual-Tactile Multimodality for Following Deformable Linear Objects Using Reinforcement Learning([paper](https://arxiv.org/abs/2204.00117))
@@ -67,10 +59,36 @@ J. Matas, S. James, and A. J. Davison, “Sim-to-Real Reinforcement Learning for
 - manipulation goal : to learn deformable object manipulation in an end-to-end manner,
 - Reference
   - [14] we employ Reinforcement Learning (RL) to create an algorithm that is task agnostic and can learn many different behaviours based on the definition of a reward and a couple of provided demonstrations. This has been extensively studied in the context of rigid object manipulation  
-    D. Quillen, E. Jang, O. Nachum, C. Finn, J. Ibarz, and S. Levine. Deep Reinforcement Learning for Vision-Based Robotic Grasping: A Simulated Comparative Evaluation of Off-Policy Methods. CoRR, 2018.
+  D. Quillen, E. Jang, O. Nachum, C. Finn, J. Ibarz, and S. Levine. Deep Reinforcement Learning for Vision-Based Robotic Grasping: A Simulated Comparative Evaluation of Off-Policy Methods. CoRR, 2018.
   - Cloth manipulation에 관련한 paper들
   - rigid object manipulation [21, 22]  
     [21] S. Gu, E. Holly, T. Lillicrap, and S. Levine. Deep Reinforcement Learning for Robotic Manipulation with Asynchronous Off-Policy Updates. International Conference on Robotics and Automation, 2016.  
     [22] J. Peters and S. Schaal. Reinforcement learning of motor skills with policy gradients. Neural Networks.
   - DDPG 관련 논문들
   - sim2real을 위한 관련 논문(domain randomization, additional training in real world)
+
+### 4. Grasp State Assessment of Deformable Objects Using Visual-Tactile Fusion Perception  
+S. Cui, R. Wang, J. Wei, F. Li, and S. Wang, “Grasp State Assessment of Deformable Objects Using Visual-Tactile Fusion Perception,” in 2020 IEEE International Conference on Robotics and Automation (ICRA), May 2020, pp. 538–544. doi: 10.1109/ICRA40945.2020.9196787.
+- Manipulation goal : how to endow robots the ability to evaluate the grasp state of deformable objects using visualtactile fusion perception.
+- Propse the 3D convolution-based visual-tactile fusion DNN to evaluate the grasp state, mimicking the strategy adopted by humans
+- Reference
+  - Grasp state assesment 관련 paper
+  - Visual-tactile fusion perception 관련 paper
+    - visual and tactile perception plays an important role in the robotics  
+    R. Calandra, A. Owens, M. Upadhyaya, W. Yuan, J. Lin, E. H. Adelson, and S. Levine, “The feeling of success: Does touch sensing help predict grasp outcomes?,” arXiv preprint arXiv:1710.05512, 2017.
+    - visuo-tactile fusion in classification[18], object recognition [19], object 3D shape perception [20]
+    - end-to-end action-conditional model that learns re-grasping policies from rowed visual-tactile data was proposed in [21]
+    - Michelle A. Lee et al. used self-supervision to learn a compact and multimodal representation of RGBs, depth, force-torque, and proprioception for different contact-rich manipulation [22].
+- 강화학습을 이용한 manipulation은 아닌 image 와 tactile sensor fusion을 이용한 state assessment(classification)
+
+### 5. Improved Learning of Robot Manipulation Tasks Via Tactile Intrinsic Motivation  
+N. Vulin, S. Christen, S. Stevšić, and O. Hilliges, “Improved Learning of Robot Manipulation Tasks Via Tactile Intrinsic Motivation,” IEEE Robotics and Automation Letters, vol. 6, no. 2, pp. 2194–2201, Apr. 2021, doi: 10.1109/LRA.2021.3061308.
+- Manipulation goal : Improve robot manipulation task performance of *"pick and place", "push", and "slide task"*  in Mujoco
+- Idea :
+  - Intrinsic force reward : tactile sensor 값을 이용한 reward(현재 state까지의 tactile force 총합이 임계값 이상일 때 on off reward)
+  - Contact-prioritized experience replay
+    - contact rich episode가 더 높은 확률로 sampling 되는 replay buffer
+- Reference
+  - Tactile feedback 관련 논문
+  - Intrinsic reward 관련 논문
+  - Experience replay 관련 논문
